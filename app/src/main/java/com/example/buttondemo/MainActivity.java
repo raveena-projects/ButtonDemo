@@ -40,4 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public  void checkboxOnclickHandler(View view){
+        Log.d("Checkbox","Checkbox selected");
+    }
 }
