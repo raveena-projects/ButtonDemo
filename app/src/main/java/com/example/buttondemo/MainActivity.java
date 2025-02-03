@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public  void checkboxOnclickHandler(View view){
-        Log.d("Checkbox","Checkbox selected");
+        CheckBox checkBox = (CheckBox) view;
+        if(checkBox.isChecked()){
+            Log.d("Checkbox selected", (String) checkBox.getText());
+            String text = (String) checkBox.getText();
+            if(text.equalsIgnoreCase("Project")){
+                Log.d("Project tag", "Project checkbox selected");
+            }
+        }
+    }
+    public void radioButtonOnClickHandler(View view){
+        RadioButton radioButton = (RadioButton) view;
+        if(radioButton.isChecked()){
+            Log.d("radioButton selected", (String) radioButton.getText());
+        }
     }
 }
