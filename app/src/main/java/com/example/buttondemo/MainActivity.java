@@ -1,5 +1,6 @@
 package com.example.buttondemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Button","Button clicked");
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
             }
         });
         imageButton = findViewById(R.id.imgBtn);
