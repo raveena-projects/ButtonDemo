@@ -34,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("Button","Button clicked");
                 Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                intent.putExtra("username","John");
+                //for sending multiple values
+                Bundle extras = new Bundle();
+                extras.putInt("user_id",10);
+                extras.putString("user_name","Alina");
+                intent.putExtras(extras);
                 startActivity(intent);
             }
         });
